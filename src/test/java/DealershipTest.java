@@ -58,6 +58,14 @@ public class DealershipTest {
         assertEquals(0, customer1.getOwnedVehicles().size());
     }
 
+    @Test
+    public void canRepairCar(){
+        car.damageVehicle();
+        dealership.buyVehicle(car);
+        dealership.repair(car);
+        assertEquals(false, car.isDamaged());
+    }
+
 
 
 

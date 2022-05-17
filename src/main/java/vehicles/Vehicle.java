@@ -43,4 +43,11 @@ public abstract class Vehicle {
         }
     }
 
+    public void setDamaged(boolean damaged) {
+        isDamaged = damaged;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 }
