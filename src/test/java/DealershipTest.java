@@ -50,6 +50,16 @@ public class DealershipTest {
         assertEquals(1, customer.getOwnedVehicles().size());
     }
 
+    @Test
+    public void cannotSellVehicleToCustomerIfNotEnoughMoney(){
+        dealership.buyVehicle(car);
+        dealership.sellVehicle(car, customer1);
+        assertEquals(1, dealership.getVehicleStock().size());
+        assertEquals(0, customer1.getOwnedVehicles().size());
+    }
+
+
+
 
 
 
