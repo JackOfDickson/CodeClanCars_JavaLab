@@ -21,4 +21,11 @@ public class Customer {
         return ownedVehicles;
     }
 
+    public void buyVehicle(Vehicle vehicle){
+        if (money >= vehicle.getPrice()){
+            ownedVehicles.add(vehicle);
+            money -= vehicle.getPrice();
+        }
+    }
+
 }
